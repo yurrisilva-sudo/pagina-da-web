@@ -3,9 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Minha primeira página 🚀</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <!-- Cabeçalho da página -->
+    <header>
+        <h1>Olá, mundo! 👋</h1>
+        <p>Essa é a minha primeira página web criada do zero.</p>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <section class="apresentacao">
+            <h2>Quem sou eu?</h2>
+            <p>
+                Meu nome é <strong>[seu nome aqui]</strong> e estou aprendendo 
+                a criar páginas web com HTML, CSS e um pouquinho de JavaScript.
+            </p>
+            <p>
+                Essa aula é inspirada no trabalho do professor 
+                <strong>Marcelo Paludetto Rodrigues</strong> na Alura Start.
+            </p>
+        </section>
+
+        <!-- A primeira interação! -->
+        <section class="interacao">
+            <h2>Vamos interagir?</h2>
+            <p>Clique no botão abaixo e veja a mágica acontecer ✨</p>
+            
+            <button id="botaoMagico">Clique em mim!</button>
+            
+            <p id="mensagem" class="escondida">
+                Parabéns! Você acabou de criar sua <strong>primeira interação</strong> 
+                em uma página web! 🎉
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Feito com ❤️ por um estudante que está começando do zero.</p>
+    </footer>
+
+    <script>
+        // Aqui começa a mágica da interação
+        const botao = document.getElementById("botaoMagico");
+        const mensagem = document.getElementById("mensagem");
+
+        botao.addEventListener("click", function() {
+            // Quando o usuário clica, a mensagem aparece
+            mensagem.classList.remove("escondida");
+            
+            // E o botão muda de texto (só por diversão)
+            botao.textContent = "Você clicou! 😄";
+            botao.disabled = true; // Desativa o botão depois do clique
+        });
+    </script>
+
 </body>
 </html>
